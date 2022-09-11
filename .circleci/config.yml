@@ -7,8 +7,22 @@ orbs:
   node: circleci/node@4.7
 
 # our defined job, and its steps
-jobs:
-  unit-test:
+# jobs:
+#   unit-test:
+#       - node/test:
+#           # This is the node version to use for the `cimg/node` tag
+#           # Relevant tags can be found on the CircleCI Developer Hub
+#           # https://circleci.com/developer/images/image/cimg/node
+#           version: '16.17'
+#           # If you are using yarn, change the line below from "npm" to "yarn"
+#           pkg-manager: yarn
+
+# Invoke jobs via workflows
+# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+workflows:
+  unit-test: # This is the name of the workflow, feel free to change it to better match your workflow.
+    # Inside the workflow, you define the jobs you want to run.
+    jobs:
       - node/test:
           # This is the node version to use for the `cimg/node` tag
           # Relevant tags can be found on the CircleCI Developer Hub
@@ -16,25 +30,3 @@ jobs:
           version: '16.17'
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: yarn
-
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-workflows:
-  unit-test:
-    jobs:
-      - unit-test
-        # filters:
-        #   branches:
-        #     only:
-        #       - '{feature/*,bugfix/*,hotfix/*}':
-
-  # unit-test: # This is the name of the workflow, feel free to change it to better match your workflow.
-  #   # Inside the workflow, you define the jobs you want to run.
-  #   jobs:
-  #     - node/test:
-  #         # This is the node version to use for the `cimg/node` tag
-  #         # Relevant tags can be found on the CircleCI Developer Hub
-  #         # https://circleci.com/developer/images/image/cimg/node
-  #         version: '16.17'
-  #         # If you are using yarn, change the line below from "npm" to "yarn"
-  #         pkg-manager: yarn
