@@ -30,4 +30,4 @@ workflows:
           version: '16.17'
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: yarn
-          timeout: 10
+          no_output_timeout: 10
