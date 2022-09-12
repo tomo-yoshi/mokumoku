@@ -1,4 +1,7 @@
-# Vercel + GraphQL + Prisma
+# MokuMoku Project
+## Prerequisite
+- node version - 16.17.0
+
 ## Tips and resources
 
 ### Resources
