@@ -21,6 +21,9 @@ jobs:
           node-version: '16.17.0'
       - run: node --version
       - run:
+          command: yarn install
+          name: Install dependencies
+      - run:
           command: yarn test
           name: Run unit tests
           no_output_timeout: 20
