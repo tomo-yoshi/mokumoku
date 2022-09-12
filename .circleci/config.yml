@@ -24,7 +24,8 @@ jobs:
           command: yarn install
           name: Install dependencies
       - run:
-          command: yarn test
+          # a flag means "run all tests"
+          command: yarn test a
           name: Run unit tests
           no_output_timeout: 20
 
