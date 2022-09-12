@@ -43,5 +43,5 @@ workflows:
     jobs:
       - set_up
       - unit_test:
-        requires:
-          - set_up
+          requires:
+            - set_up
