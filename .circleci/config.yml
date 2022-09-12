@@ -14,8 +14,6 @@ jobs:
     executor: node/default # use the default executor defined within the orb
     steps:
       - checkout
-      # - node/install-packages:
-      #     pkg-manager: yarn
       - node/install:
           install-yarn: true
           node-version: '16.17.0'
@@ -40,6 +38,7 @@ jobs:
           # a flag means "run all tests"
           command: yarn test-ci
           name: Run unit tests
+          # no_output_timeout: 60
 
 workflows:
   run_test: # this can be any name you choose
