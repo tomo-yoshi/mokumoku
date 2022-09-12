@@ -4,7 +4,7 @@ version: 2.1
 # Orbs are reusable packages of CircleCI configuration that you may share across projects, enabling you to create encapsulated, parameterized commands, jobs, and executors that can be used across multiple projects.
 # See: https://circleci.com/docs/2.0/orb-intro/
 orbs:
-  node: circleci/node@4.7
+  node: circleci/node@5.0.2
 
 # Reference **********************************
 # https://circleci.com/docs/language-javascript#build-and-test-the-app
@@ -14,8 +14,12 @@ jobs:
     executor: node/default # use the default executor defined within the orb
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: yarn
+      # - node/install-packages:
+      #     pkg-manager: yarn
+      - node/install:
+          install-yarn: true
+          node-version: '16.17.0'
+      - run: node --version
       - run:
           command: yarn test
           name: Run unit tests
