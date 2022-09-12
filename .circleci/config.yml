@@ -42,4 +42,6 @@ workflows:
   run_test: # this can be any name you choose
     jobs:
       - set_up
-      - unit_test
+      - unit_test:
+        requires:
+          - set_up
