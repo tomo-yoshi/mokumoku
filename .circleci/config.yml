@@ -27,7 +27,7 @@ jobs:
           # a flag means "run all tests"
           command: yarn test a
           name: Run unit tests
-          no_output_timeout: 20
+          no_output_timeout: 30
 
 workflows:
   run_test: # this can be any name you choose
