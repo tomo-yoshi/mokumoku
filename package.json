@@ -9,7 +9,8 @@
     "lint": "next lint",
     "migrate": "npx prisma migrate dev --name init",
     "push": "npx prisma db push",
-    "test": "jest --watch"
+    "test-dev": "jest --watch",
+    "test-ci": "jest --watchAll=false"
   },
   "dependencies": {
     "@prisma/client": "4.3.1",
