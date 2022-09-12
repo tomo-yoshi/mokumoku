@@ -18,10 +18,10 @@ jobs:
           pkg-manager: yarn
       - run:
           command: yarn test
-          name: Run tests
+          name: Run unit tests
           no_output_timeout: 20
 
 workflows:
-  unit_test: # this can be any name you choose
+  run_test: # this can be any name you choose
     jobs:
-      - build_and_test
+      - unit_test
