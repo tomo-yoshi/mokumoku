@@ -19,3 +19,9 @@ jobs:
       - run:
           command: yarn test
           name: Run tests
+          no_output_timeout: 20
+
+workflows:
+  unit_test: # this can be any name you choose
+    jobs:
+      - build_and_test
