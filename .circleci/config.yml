@@ -10,12 +10,10 @@ orbs:
 # https://circleci.com/docs/language-javascript#build-and-test-the-app
 # ********************************************
 jobs:
-  unit_test: # this can be any name you choose
+  set_up:
     executor: node/default # use the default executor defined within the orb
     steps:
-      - checkout
-      # - node/install-packages:
-      #     pkg-manager: yarn
+      # - checkout
       - node/install:
           install-yarn: true
           node-version: '16.17.0'
@@ -23,6 +21,17 @@ jobs:
       - run:
           command: yarn install
           name: Install dependencies
+  unit_test: # this can be any name you choose
+    executor: node/default # use the default executor defined within the orb
+    steps:
+      # - checkout
+      # - node/install:
+      #     install-yarn: true
+      #     node-version: '16.17.0'
+      # - run: node --version
+      # - run:
+      #     command: yarn install
+      #     name: Install dependencies
       - run:
           # a flag means "run all tests"
           command: yarn test-ci
@@ -32,4 +41,5 @@ jobs:
 workflows:
   run_test: # this can be any name you choose
     jobs:
+      - set_up
       - unit_test
