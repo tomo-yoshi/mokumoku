@@ -140,6 +140,8 @@ The main branch is connected to Vercel. Therefore, the main branch is always syn
 3. Confirm `All checks have passed`
 4. Confirm there are no conflicts
 5. Click the `Squash and merge` button
+6. Create PR from `main` to `develop`
+7. Merge `main` to `develop` so that both branches have the same git history
 
 ---
 
