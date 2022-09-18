@@ -63,6 +63,9 @@ This repository has adopted customized [Git flow](https://nvie.com/posts/a-succe
   3. Select yourself as an assignee
   4. Confirm all checks have passed
   5. Ask the reviewer to review the PR
+  
+  Wait for the reviewer's feedback
+
   6. Merge the feature branch to develop branch with "Create a merge commit" or "Squash and merge"
   7. Delete the feature branch if it is no longer needed
   
