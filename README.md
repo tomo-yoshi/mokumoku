@@ -57,37 +57,44 @@ This repository has adopted customized [Git flow](https://nvie.com/posts/a-succe
   ```
 
   #### Merge feature branch to develop branch
-  #### Create Pull Request
+  ##### Create Pull Request
   1. Leave a comment to explan your commits
   2. Set at least one reviewer among team members except for yourself
   3. Select yourself as an assignee
   4. Confirm all checks have passed
   5. Ask the reviewer to review the PR
-  6. Merge the feature branch to develop branch
+  6. Merge the feature branch to develop branch with "Create a merge commit" or "Squash and merge"
   7. Delete the feature branch if it is no longer needed
   
   Fix a conflict if it occurs.
 
   #####  Fix conflicts at local
-  1. Go to a feature branch
-  2. Pull remote develop branch
-  3. Fix conflicts
-  4. Add your changes to stage
-  5. Commit the changes
-  6. Push your commit to remote repo
+  1. Confirm the branch is clean
+  2. Go to a feature branch
+  3. Pull remote develop branch
+  4. Fix conflicts
+  5. Add your changes to stage
+  6. Commit the changes
+  7. Push your commit to remote repo
   ```
-  git checkout feature-exmaple
-  git pull origin/develop
+  git status
+  git checkout develop
+  git pull origin develop
+  git checkout featurre-example
+  git merge develop
 
   <FIX CONFLICTS IN FILES>
 
-  git commit -m "one line summary of your commit"
+  git add .
+  git commit -m "fix conflicts in xxx file at the local repo"
   git push origin feature-example
   ```
   Or you will be able to fix conflicts on GitHub console
 
-  ### Merge feature branch to develop branch
-
+  ##### Review PR
+  1. Click the "Files changed" tab
+  2. Confirm updates
+  2. Click the "Review changes" button
 
 ## CI/CD
 ### CircleCI
@@ -98,6 +105,7 @@ Every commit triggers unit tests on GitHub. The tests are running on CircleCI.
 #### Deployment
 The main branch is connected to Vercel. Therefore, the main branch is always synchronized to production.
 
+---
 
 ## Tips and resources
 
