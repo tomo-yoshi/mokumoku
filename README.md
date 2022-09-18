@@ -1,6 +1,111 @@
 # MokuMoku Project
 ## Prerequisite
-- node version - 16.17.0
+- node version - >=16.17.0
+- `yarn` command
+
+## Branching Strategy
+This repository has adopted customized [Git flow](https://nvie.com/posts/a-successful-git-branching-model/). Our team does not use *release(staging) branch* at this point. Instead, *bugfix beanch* is used to fix bugs on the develop branch.
+
+  ### Main branches
+  - main
+
+    The main branch is a production branch as well. A most stable version of the code is stored on the branch. In addition, the branch is connected to a deployment pipeline of [Vercel](https://vercel.com/). Commits on this branch will be released as a production.
+
+  - develop
+
+    The develop branch is a default branch for developers to work on. Supporting branches, such as *feature* and *bugfix*, should be created from this branch.
+
+  ### Supporting branches
+  - feature
+
+    feature branches are used to implement new features. When a developer develops a new feature, they should create a new branch with "feature-" prefix on its name from the develop branch. **One feature branch should be respnsible for only one feature.** A new branch should be created when implementing another feature to make peer-review and testing easy.
+
+  - bugfix
+
+    bugfix branches are used to fix bugs on the develop branch. When a developer fixes a bug, they should create a new branch with "bugfix-" prefix on its name from the develop branch. **One bugfix branch should be respnsible for only one bugfix.** A new branch should be created when fixing another issues to make peer-review and testing easy.
+
+    However, **in the case when several bugs are fixed in a same file at the same time, several issues may be fixed on a same bugfix branch.**
+
+  - hotfix
+
+    hotfix branches are used to fix bugs on the main branch. When a developer fixes a bug, they should create a new branch with "hotfix-" prefix on its name from the main branch. **One hotfix branch should be respnsible for only one issue.** And then, **the branch should be merged to both main and develop.**
+
+  ### Git workflow
+
+  #### Implement a new feature
+  ##### Start working
+  1. Go to develop branch in your local
+  2. Pull the latest version of the code
+  3. Create a new feature branch from develop branch
+  ```
+  git checkout develop
+  git pull origin develop
+  git checkout -b feature-example
+  ```
+  #####  Push commits of a feature branch to remote repository
+  1. See changed files
+  2. See differences of files
+  3. Add your changes to stage
+  4. Commit the changes
+  5. Push your commit to remote repo
+  ```
+  git status 
+  git diff <filename>
+  git add .
+  git commit -m "one line summary of your commit"
+  git push origin feature-example
+  ```
+
+  #### Merge feature branch to develop branch
+  ##### Create Pull Request
+  1. Leave a comment to explan your commits
+  2. Set at least one reviewer among team members except for yourself
+  3. Select yourself as an assignee
+  4. Confirm all checks have passed
+  5. Ask the reviewer to review the PR
+  6. Merge the feature branch to develop branch with "Create a merge commit" or "Squash and merge"
+  7. Delete the feature branch if it is no longer needed
+  
+  Fix a conflict if it occurs.
+
+  #####  Fix conflicts at local
+  1. Confirm the branch is clean
+  2. Go to a feature branch
+  3. Pull remote develop branch
+  4. Fix conflicts
+  5. Add your changes to stage
+  6. Commit the changes
+  7. Push your commit to remote repo
+  ```
+  git status
+  git checkout develop
+  git pull origin develop
+  git checkout featurre-example
+  git merge develop
+
+  <FIX CONFLICTS IN FILES>
+
+  git add .
+  git commit -m "fix conflicts in xxx file at the local repo"
+  git push origin feature-example
+  ```
+  Or you will be able to fix conflicts on GitHub console
+
+  ##### Review PR
+  1. Click the "Files changed" tab
+  2. Confirm updates
+  2. Click the "Review changes" button
+
+## CI/CD
+### CircleCI
+#### Unit test
+Every commit triggers unit tests on GitHub. The tests are running on CircleCI.
+
+### Vercel
+#### Deployment
+The main branch is connected to Vercel. Therefore, the main branch is always synchronized to production.
+
+---
 
 ## Tips and resources
 
