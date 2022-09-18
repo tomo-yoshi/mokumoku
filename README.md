@@ -95,6 +95,7 @@ This repository has adopted customized [Git flow](https://nvie.com/posts/a-succe
   1. Click the `Files changed` tab
   2. Confirm updates
   3. Click the `Review changes` button
+  4. 
 
 ## CI/CD
 ### CircleCI
