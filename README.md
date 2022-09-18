@@ -86,7 +86,7 @@ This repository has adopted customized [Git flow](https://nvie.com/posts/a-succe
   <FIX CONFLICTS IN FILES>
 
   git add .
-  git commit -m "one line summary of your commit"
+  git commit -m "fix conflicts in xxx file at the local repo"
   git push origin feature-example
   ```
   Or you will be able to fix conflicts on GitHub console
