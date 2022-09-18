@@ -57,7 +57,7 @@ This repository has adopted customized [Git flow](https://nvie.com/posts/a-succe
   ```
 
   #### Merge feature branch to develop branch
-  #### Create Pull Request
+  ##### Create Pull Request
   1. Leave a comment to explan your commits
   2. Set at least one reviewer among team members except for yourself
   3. Select yourself as an assignee
@@ -91,8 +91,10 @@ This repository has adopted customized [Git flow](https://nvie.com/posts/a-succe
   ```
   Or you will be able to fix conflicts on GitHub console
 
-  ### Merge feature branch to develop branch
-
+  ##### Review PR
+  1. Click the "Files changed" tab
+  2. Confirm updates
+  2. Click the "Review changes" button
 
 ## CI/CD
 ### CircleCI
