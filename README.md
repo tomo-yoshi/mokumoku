@@ -92,10 +92,34 @@ This repository has adopted customized [Git flow](https://nvie.com/posts/a-succe
   Or you will be able to fix conflicts on GitHub console
 
   ##### Review PR
-  1. Click the `Files changed` tab
-  2. Confirm updates
-  3. Click the `Review changes` button
-  4. 
+  1. Click `Visit Preview` to see a preview page
+  2. Click the `Files changed` tab
+  3. Confirm updates
+  4. Click the `Review changes` button
+  5. If it tooks good
+
+  a. Leave a comment(e.g. LGTM)
+
+  b. Select `Approve`
+
+  c. Click `Submit review`
+
+  5. If there is something to fix
+
+  a. Leave a comment about an issue you found
+
+  b. Select `Request changes`
+
+  c. Click `Submit review`
+
+  6. Tell your review result to an asignee
+
+  ##### Resolve an issue reported by Peer Review
+  1. Work on your local to fix an issue on the same branch
+  2. Push your code to the remote repo
+  3. Change the status of comments of the review to `resolved`
+  4. Ask the reviewer to review your commit again
+  
 
 ## CI/CD
 ### CircleCI
