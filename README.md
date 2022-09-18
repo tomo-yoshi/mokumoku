@@ -1,6 +1,94 @@
 # MokuMoku Project
 ## Prerequisite
-- node version - 16.17.0
+- node version - >=16.17.0
+- `yarn` command
+
+## Branching Strategy
+This repository has adopted customized [Git flow](https://nvie.com/posts/a-successful-git-branching-model/). Our team does not use *release(staging) branch* at this point. Instead, *bugfix beanch* is used to fix bugs on the develop branch.
+
+  ### Main branches
+  - main
+
+    The main branch is a production branch as well. A most stable version of the code is stored on the branch. In addition, the branch is connected to a deployment pipeline of [Vercel](https://vercel.com/). Commits on this branch will be released as a production.
+
+  - develop
+
+    The develop branch is a default branch for developers to work on. Supporting branches, such as *feature* and *bugfix*, should be created from this branch.
+
+  ### Supporting branches
+  - feature
+
+    feature branches are used to implement new features. When a developer develops a new feature, they should create a new branch with "feature-" prefix on its name from the develop branch. **One feature branch should be respnsible for only one feature.** A new branch should be created when implementing another feature to make peer-review and testing easy.
+
+  - bugfix
+
+    bugfix branches are used to fix bugs on the develop branch. When a developer fixes a bug, they should create a new branch with "bugfix-" prefix on its name from the develop branch. **One bugfix branch should be respnsible for only one bugfix.** A new branch should be created when fixing another issues to make peer-review and testing easy.
+
+    However, **in the case when several bugs are fixed in a same file at the same time, several issues may be fixed on a same bugfix branch.**
+
+  - hotfix
+
+    hotfix branches are used to fix bugs on the main branch. When a developer fixes a bug, they should create a new branch with "hotfix-" prefix on its name from the main branch. **One hotfix branch should be respnsible for only one issue.** And then, **the branch should be merged to both main and develop.**
+
+  ### Git workflow
+
+  #### Implement a new feature
+  ##### Start working
+    1. Go to develop branch in your local
+    2. Pull the latest version of the code
+    3. Create a new feature branch from develop branch
+  ```
+  git checkout develop
+  git pull origin develop
+  git checkout -b feature-example
+  ```
+  #####  Push commits of a feature branch to remote repository
+    1. See changed files
+    2. See differences of files
+    3. Add your changes to stage
+    4. Commit the changes
+    5. Push your commit to remote repo
+  ```
+  git status 
+  git diff <filename>
+  git add .
+  git commit -m "one line summary of your commit"
+  git push origin feature-example
+  ```
+
+  ### Merge feature branch to develop branch
+
+
+  #####  Fix conflicts at local
+    1. Go to a feature branch
+    2. Pull remote develop branch
+    3. Fix conflicts
+    4. Add your changes to stage
+    5. Commit the changes
+    6. Push your commit to remote repo
+  ```
+  git checkout feature-exmaple
+  git pull origin/develop
+
+  <FIX CONFLICTS IN FILES>
+
+  git commit -m "one line summary of your commit"
+  git push origin feature-example
+  ```
+  Or you will be able to fix conflicts on GitHub console
+
+  ### Merge feature branch to develop branch
+
+
+## CI/CD
+### CircleCI
+#### Unit test
+Every commit triggers unit tests on GitHub. The tests are running on CircleCI.
+
+### Vercel
+#### Deployment
+The main branch is connected to Vercel. Therefore, the main branch is always synchronized to production.
+
 
 ## Tips and resources
 
