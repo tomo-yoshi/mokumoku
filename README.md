@@ -22,7 +22,7 @@ This repository has adopted customized [Git flow](https://nvie.com/posts/a-succe
 
   - bugfix
 
-    bugfix branches are used to fix bugs on the develop branch. When a developer fixes a bug, they should create a new branch with "bugfix-" prefix on its name from the develop branch. **One bugfix branch should be respnsible for only one bugfix.** A new branch should be created when fixing another issues to make peer-review and testing easy.
+    bugfix branches are used to fix bugs on the develop branch. When a developer fixes a bug, they should create a new branch with "bugfix-" prefix on its name from the develop branch. **One bugfix branch should be respnsible for only one bugfix.** A new branch should be created when fixing another issue to make peer-review and testing easy.
 
     However, **in the case when several bugs are fixed in a same file at the same time, several issues may be fixed on a same bugfix branch.**
 
