@@ -92,9 +92,9 @@ This repository has adopted customized [Git flow](https://nvie.com/posts/a-succe
   Or you will be able to fix conflicts on GitHub console
 
   ##### Review PR
-  1. Click the "Files changed" tab
+  1. Click the `Files changed` tab
   2. Confirm updates
-  2. Click the "Review changes" button
+  3. Click the `Review changes` button
 
 ## CI/CD
 ### CircleCI
@@ -104,6 +104,12 @@ Every commit triggers unit tests on GitHub. The tests are running on CircleCI.
 ### Vercel
 #### Deployment
 The main branch is connected to Vercel. Therefore, the main branch is always synchronized to production.
+
+1. Create PR from `develop` to `main`
+2. See a Preview page
+3. Confirm `All checks have passed`
+4. Confirm there are no conflicts
+5. Click the `Squash and merge` button
 
 ---
 
