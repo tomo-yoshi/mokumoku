@@ -34,20 +34,20 @@ This repository has adopted customized [Git flow](https://nvie.com/posts/a-succe
 
   #### Implement a new feature
   ##### Start working
-    1. Go to develop branch in your local
-    2. Pull the latest version of the code
-    3. Create a new feature branch from develop branch
+  1. Go to develop branch in your local
+  2. Pull the latest version of the code
+  3. Create a new feature branch from develop branch
   ```
   git checkout develop
   git pull origin develop
   git checkout -b feature-example
   ```
   #####  Push commits of a feature branch to remote repository
-    1. See changed files
-    2. See differences of files
-    3. Add your changes to stage
-    4. Commit the changes
-    5. Push your commit to remote repo
+  1. See changed files
+  2. See differences of files
+  3. Add your changes to stage
+  4. Commit the changes
+  5. Push your commit to remote repo
   ```
   git status 
   git diff <filename>
@@ -56,16 +56,25 @@ This repository has adopted customized [Git flow](https://nvie.com/posts/a-succe
   git push origin feature-example
   ```
 
-  ### Merge feature branch to develop branch
-
+  #### Merge feature branch to develop branch
+  #### Create Pull Request
+  1. Leave a comment to explan your commits
+  2. Set at least one reviewer among team members except for yourself
+  3. Select yourself as an assignee
+  4. Confirm all checks have passed
+  5. Ask the reviewer to review the PR
+  6. Merge the feature branch to develop branch
+  7. Delete the feature branch if it is no longer needed
+  
+  Fix a conflict if it occurs.
 
   #####  Fix conflicts at local
-    1. Go to a feature branch
-    2. Pull remote develop branch
-    3. Fix conflicts
-    4. Add your changes to stage
-    5. Commit the changes
-    6. Push your commit to remote repo
+  1. Go to a feature branch
+  2. Pull remote develop branch
+  3. Fix conflicts
+  4. Add your changes to stage
+  5. Commit the changes
+  6. Push your commit to remote repo
   ```
   git checkout feature-exmaple
   git pull origin/develop
