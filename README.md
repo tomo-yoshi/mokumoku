@@ -76,8 +76,10 @@ This repository has adopted customized [Git flow](https://nvie.com/posts/a-succe
   5. Commit the changes
   6. Push your commit to remote repo
   ```
-  git checkout feature-exmaple
-  git merge origin/develop
+  git checkout develop
+  git pull origin develop
+  git checkout featurre-example
+  git merge develop
 
   <FIX CONFLICTS IN FILES>
 
