@@ -73,12 +73,14 @@ This repository has adopted customized [Git flow](https://nvie.com/posts/a-succe
 
   #####  Fix conflicts at local
   1. Confirm the branch is clean
-  2. Go to a feature branch
+  2. Go to develop branch
   3. Pull remote develop branch
-  4. Fix conflicts
-  5. Add your changes to stage
-  6. Commit the changes
-  7. Push your commit to remote repo
+  4. Go back to a feature branch
+  5. Merge develop branch to the feature branch
+  6. Fix conflicts
+  7. Add your changes to stage
+  8. Commit the changes
+  9. Push your commit to remote repo
   ```
   git status
   git checkout develop
