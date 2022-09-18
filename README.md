@@ -81,6 +81,7 @@ This repository has adopted customized [Git flow](https://nvie.com/posts/a-succe
 
   <FIX CONFLICTS IN FILES>
 
+  git add .
   git commit -m "one line summary of your commit"
   git push origin feature-example
   ```
