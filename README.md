@@ -163,14 +163,19 @@ This is an example of how to list things you need to use the software and how to
    ```
    Open `http://localhost:5556` on your browser and confirm the DB is running ~~and the test data was successfully inserted~~.
 
-7. Run Next.js in dev-mode
+7. Make `.env` file and add `DATABASE_URL` var
+   ```sh
+   touch .env && echo 'DATABASE_URL="postgresql://test-user:test-password@localhost:5433"' >> .echo
+   ```
+
+8. Run Next.js in dev-mode
    ```sh
    yarn dev
    ```
    - Open `http://localhost:3000/` for front-end
    - Open `http://localhost:3000/api/graphql` for back-end
 
-8. Done 🚀🚀🚀
+9. Done 🚀🚀🚀
 
     You can start browsing the project in your local environment.
 
