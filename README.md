@@ -299,6 +299,8 @@ This repository has adopted customized [Git flow](https://nvie.com/posts/a-succe
   3. Change the status of comments of the review to `resolved`
   4. Ask the reviewer to review your commit again
   
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## CI/CD
 ### CircleCI
@@ -317,6 +319,8 @@ The main branch is connected to Vercel. Therefore, the main branch is always syn
 6. Create PR from `main` to `develop`
 7. Merge `main` to `develop` so that both branches have the same git history
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ---
 
 ## Tips and resources
@@ -333,6 +337,8 @@ The main branch is connected to Vercel. Therefore, the main branch is always syn
 - [Step 3. Create your database schema with Prisma](https://vercel.com/guides/nextjs-prisma-postgres#step-3.-create-your-database-schema-with-prisma)
 
 You should run `npx prisma db push` instead of `npx prisma migrate dev --name init` to make tables in DB
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
 
