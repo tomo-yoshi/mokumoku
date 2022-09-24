@@ -78,7 +78,7 @@
       </ul>
     </li>
     <li>
-      <a href="#ci/cd">CI/CD</a>
+      <a href="#cicd">CI/CD</a>
       <ul>
         <li><a href="#circleci">CircleCI</a></li>
         <li><a href="#vercel">Vercel</a></li>
