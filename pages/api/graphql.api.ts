@@ -4,6 +4,8 @@ import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-co
 import { typeDefs } from "./schemas";
 import { resolvers } from "./resolvers";
 
+console.log("test")
+
 const apolloServer = new ApolloServer({
   typeDefs,
   resolvers,
