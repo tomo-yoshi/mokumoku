@@ -167,7 +167,7 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    yarn dev
    ```
-   - Open `http://localhost:3000/graphql` for front-end
+   - Open `http://localhost:3000/` for front-end
    - Open `http://localhost:3000/api/graphql` for back-end
 
 8. Done 🚀🚀🚀
