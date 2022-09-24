@@ -412,18 +412,18 @@ Project Link: [https://github.com/TOMO-YOSHI/mokumoku](https://github.com/TOMO-Y
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/https://github.com/TOMO-YOSHI/mokumoku.svg?style=for-the-badge
-[contributors-url]:/https://github.com/TOMO-YOSHI/mokumoku/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/https://github.com/TOMO-YOSHI/mokumoku.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/TOMO-YOSHI/mokumoku.svg?style=for-the-badge
+[contributors-url]: https://github.com/TOMO-YOSHI/mokumoku/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/TOMO-YOSHI/mokumoku.svg?style=for-the-badge
 [forks-url]: https://github.com/TOMO-YOSHI/mokumoku/network/members
-[stars-shield]: https://img.shields.io/github/stars/https://github.com/TOMO-YOSHI/mokumoku.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/TOMO-YOSHI/mokumoku.svg?style=for-the-badge
 [stars-url]: https://github.com/TOMO-YOSHI/mokumoku/stargazers
-[issues-shield]: https://img.shields.io/github/issues/https://github.com/TOMO-YOSHI/mokumoku.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/TOMO-YOSHI/mokumoku.svg?style=for-the-badge
 [issues-url]: https://github.com/TOMO-YOSHI/mokumoku/issues
-[license-shield]: https://img.shields.io/github/license/https://github.com/TOMO-YOSHI/mokumoku.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/TOMO-YOSHI/mokumoku.svg?style=for-the-badge
 [license-url]: https://github.com/TOMO-YOSHI/mokumoku/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://www.linkedin.com/in/tomohiro/
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
