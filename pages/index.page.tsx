@@ -1,16 +1,9 @@
-import type { NextPage } from 'next'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Hello MokuMoku-Kai!!!
-        </h1>
-      </main>
-    </div>
-  )
-}
+    <h1 className="text-center font-mono underline">Hello MokuMoku-Kai!!!</h1>
+  );
+};
 
-export default Home
+export default Home;
