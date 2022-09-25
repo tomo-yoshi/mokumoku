@@ -138,7 +138,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo and enter the directory
    ```sh
-   https://github.com/TOMO-YOSHI/mokumoku.git
+   git clone https://github.com/TOMO-YOSHI/mokumoku.git
    cd mokumoku
    ```
 2. Install packages
@@ -165,7 +165,7 @@ This is an example of how to list things you need to use the software and how to
 
 7. Make `.env` file and add `DATABASE_URL` var
    ```sh
-   touch .env && echo 'DATABASE_URL="postgresql://test-user:test-password@localhost:5433"' >> .echo
+   touch .env && echo 'DATABASE_URL="postgresql://test-user:test-password@localhost:5433"' >> .env
    ```
 
 8. Run Next.js in dev-mode
