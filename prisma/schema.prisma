@@ -11,6 +11,30 @@ datasource db {
 }
 
 model User {
-  id    String @id
-  name  String?
+  id          String  @id @unique
+  name        String  @db.VarChar(255)
+  twitterId   String?  @db.VarChar(255) @unique
+  email       String?  @db.VarChar(255) @unique
+  role        Role    @default(USER)
+  joinEvents  Event[] @relation("joinEvents")
+  hostEvents  Event[] @relation("hostEvents")
+}
+
+model Event {
+  id            Int        @id @default(autoincrement())
+  title         String     @db.VarChar(255)
+  createdAt     DateTime   @default(now())
+  startAt       DateTime
+  description   String?    @db.VarChar(255)
+  schedules     String?    @db.VarChar(510)
+  venue         String     @db.VarChar(255)
+  host          User       @relation(name: "hostEvents", fields: [hostId], references: [id])
+  hostId        String
+  sopts         Int
+  attendees     User[]     @relation(name: "joinEvents")
+}
+
+enum Role {
+  USER
+  ADMIN
 }
