@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -6,7 +6,6 @@ import Logo from "../../public/assets/img/logo.png";
 import { BsThreeDotsVertical, BsX } from "react-icons/bs";
 
 export const Navbar = () => {
-  const [login, setLogin] = useState<boolean>(false);
   const [open, setOpen] = useState<boolean>(false);
   return (
     <nav

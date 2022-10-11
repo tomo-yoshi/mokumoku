@@ -149,24 +149,23 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    docker-compose up
    ```
-4. Set up DB schema
+4. Make `.env` file and add `DATABASE_URL` var
+   ```sh
+   touch .env && echo 'DATABASE_URL="postgresql://test-user:test-password@localhost:5433"' >> .env
+   ```
+5. Set up DB schema
    ```sh
    npx prisma migrate dev --name init
    ```
-5. ~~Insert test data into DB~~
+6. ~~Insert test data into DB~~
    ```sh
    npx ts-node ./src/prisma/seed.ts
    ```
-6. Run prisma studio to see DB on browser
+7. Run prisma studio to see DB on browser
    ```sh
    npx prisma studio
    ```
    Open `http://localhost:5556` on your browser and confirm the DB is running ~~and the test data was successfully inserted~~.
-
-7. Make `.env` file and add `DATABASE_URL` var
-   ```sh
-   touch .env && echo 'DATABASE_URL="postgresql://test-user:test-password@localhost:5433"' >> .env
-   ```
 
 8. Run Next.js in dev-mode
    ```sh
