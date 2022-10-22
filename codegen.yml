@@ -7,6 +7,6 @@ generates:
       - "typescript-resolvers"
     config:
       useIndexSignature: true
-      contextType: "@types/context"
+      contextType: "../context#Context"
       enumsAsTypes: true
 
