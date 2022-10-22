@@ -30,6 +30,7 @@ type Event {
   startAt: DateTime!
   description: String
   venue: String!
+  hostId: String
   host: User
   spots: Int!
   attendees: [User]

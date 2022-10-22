@@ -39,6 +39,7 @@ export type Event = {
   createdAt: Scalars['DateTime'];
   description?: Maybe<Scalars['String']>;
   host?: Maybe<User>;
+  hostId?: Maybe<Scalars['String']>;
   id: Scalars['Int'];
   spots: Scalars['Int'];
   startAt: Scalars['DateTime'];
@@ -274,6 +275,7 @@ export type EventResolvers<ContextType = Context, ParentType extends ResolversPa
   createdAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>;
   description?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   host?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
+  hostId?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   spots?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   startAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>;
