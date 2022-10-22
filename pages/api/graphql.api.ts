@@ -1,14 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { ApolloServer, gql } from "apollo-server-micro";
+import { ApolloServer } from "apollo-server-micro";
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 import { typeDefs } from './schemas';
 import { resolvers } from "./resolvers";
-import fs from "fs";
-import path from 'path';
 
-// const typeDefs = gql(fs.readFileSync(path.join(__dirname, '..', '..', '..', '..', 'pages/api/schemas/schema.graphql'), { encoding: 'utf8' }));
-// const typeDefs = gql(fs.readFileSync(path.join(__dirname, '..', '..', '..', '..', 'pages/api/schemas/schema.graphql'), { encoding: 'utf8' }));
-// const typeDefs = gql(fs.readFileSync('./schemas/schema.graphql', { encoding: 'utf8' }));
 const apolloServer = new ApolloServer({
   typeDefs,
   resolvers,
