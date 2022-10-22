@@ -1,11 +1,28 @@
-const { prisma } = require('../../../lib/prisma')
+import { Resolvers } from '../../../@types/generated/graphql';
+import * as query from './query';
+import { prisma } from '../../../prisma/client';
 
-export const resolvers = {
-  Query: {
-    getUser: async() => {
-      const res = await prisma.user.findMany();
-      return res;
+export const resolvers: Resolvers = {
+  Query: query,
+
+  Event: {
+    host: (event: { hostId: string; }) => prisma.user.findUnique({
+      where: {
+        id: event.hostId
+      }
+    }),
+    attendees: async(event: { id: number }) => {
+      const ueRes = await prisma.userEvent.findMany({
+        where: {
+          eventId: event.id
+        }
+      });
+      const promises = ueRes.map((el) => prisma.user.findUnique({
+        where: {
+          id: el.userId
+        }
+      }));
+      return Promise.all(promises);
     },
-    hello: (): String => "Hello world!!!"
-  },
+  }
 };

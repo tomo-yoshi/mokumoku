@@ -1,0 +1,12 @@
+overwrite: true
+schema: "./pages/api/schemas/schema.graphql"
+generates:
+  "@types/generated/graphql.ts":
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+    config:
+      useIndexSignature: true
+      contextType: "@types/context"
+      enumsAsTypes: true
+
