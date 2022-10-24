@@ -15,7 +15,7 @@ const getUserQuery = gql`
   }
 `;
 
-const TestClient = () => {
+export const TestClient = () => {
   const { data, error, loading } = useQuery(getUserQuery);
   const users: [User] = data?.getUser;
 
@@ -33,4 +33,3 @@ const TestClient = () => {
     </>
   );
 };
-export default TestClient;
