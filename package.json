@@ -10,7 +10,8 @@
     "migrate": "npx prisma migrate dev --name init",
     "push": "npx prisma db push",
     "test-dev": "jest --watch",
-    "test-ci": "jest --watchAll=false"
+    "test-ci": "jest --watchAll=false",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@apollo/client": "^3.7.0",
@@ -24,6 +25,9 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "2.13.7",
+    "@graphql-codegen/typescript": "2.7.5",
+    "@graphql-codegen/typescript-resolvers": "2.7.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/node": "18.7.14",

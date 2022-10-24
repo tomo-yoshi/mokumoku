@@ -1,10 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { ApolloServer } from "apollo-server-micro";
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
-import { typeDefs } from "./schemas";
+import { typeDefs } from './schemas';
 import { resolvers } from "./resolvers";
-
-console.log("test")
 
 const apolloServer = new ApolloServer({
   typeDefs,

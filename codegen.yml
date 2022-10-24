@@ -1,0 +1,12 @@
+overwrite: true
+schema: "./pages/api/schemas/index.ts"
+generates:
+  "@types/generated/graphql.ts":
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+    config:
+      useIndexSignature: true
+      contextType: "../context#Context"
+      enumsAsTypes: true
+

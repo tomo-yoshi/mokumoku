@@ -8,7 +8,7 @@ type User = {
 
 const getUserQuery = gql`
   query {
-    getUser {
+    getUser(id: 1111) {
       id
       name
     }
@@ -17,19 +17,16 @@ const getUserQuery = gql`
 
 export const TestClient = () => {
   const { data, error, loading } = useQuery(getUserQuery);
-  const users: [User] = data?.getUser;
+  const user = data && data.getUser;
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error!{error.message}</p>;
   return (
     <>
-      {users &&
-        users.map((user: User) => (
-          <div key={user.id}>
-            <h1>id:{user.id}</h1>
-            <h2>name:{user.name}</h2>
-          </div>
-        ))}
+      <div>
+        <h1>id:{user && user.id}</h1>
+        <h2>name:{user && user.name}</h2>
+      </div>
     </>
   );
 };
