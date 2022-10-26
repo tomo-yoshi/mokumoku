@@ -32,6 +32,26 @@ export const resolvers: Resolvers = {
           hostId: user.id
         }
       });
+    },
+    joinEvents: async(user: { id: string }) => {
+      const ueRes = await prisma.userEvent.findMany({
+        where: {
+          AND: [
+            {
+              userId: user.id
+            },
+            {
+              canceledAt: null
+            }
+          ]
+        }
+      });
+      const promises = ueRes.map((el) => prisma.event.findUnique({
+        where: {
+          id: el.eventId
+        }
+      }));
+      return Promise.all(promises);
     }
   }
 };
