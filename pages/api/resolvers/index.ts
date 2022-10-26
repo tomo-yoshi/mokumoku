@@ -24,5 +24,14 @@ export const resolvers: Resolvers = {
       }));
       return Promise.all(promises);
     },
+  },
+  User: {
+    hostEvents: (user: { id: string }) => {
+      return prisma.event.findMany({
+        where: {
+          hostId: user.id
+        }
+      });
+    }
   }
 };
