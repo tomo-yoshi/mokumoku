@@ -165,7 +165,7 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npx prisma studio
    ```
-   Open `http://localhost:5555` on your browser and confirm the DB is running ~~and the test data was successfully inserted~~.
+   Open `http://localhost:5555` on your browser and confirm the DB is running and the test data was successfully inserted.
 
 8. Run Next.js in dev-mode
    ```sh
