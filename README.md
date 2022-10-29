@@ -84,6 +84,12 @@
         <li><a href="#vercel">Vercel</a></li>
       </ul>
     </li>
+    <li>
+      <a href="#codegen">Codegen</a>
+      <ul>
+        <li><a href="#backend-workflow">Backend workflow</a></li>
+      </ul>
+    </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -322,6 +328,30 @@ The main branch is connected to Vercel. Therefore, the main branch is always syn
 5. Click the `Squash and merge` button
 6. Create PR from `main` to `develop`
 7. Merge `main` to `develop` so that both branches have the same git history
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Codegen
+
+This project has adopted [GraphQL Code Generator](https://github.com/dotansimha/graphql-code-generator) to automatically generate Type code out of GrapuQL. Settings are written in `./codegen.yml`.
+
+### Backend workflow
+- Every time you edit `./pages/api/schemas/index.ts`, run the codegen command below:
+
+```
+yarn codegen
+```
+- The code is generated to `@types/generated/graphql.ts`. Use generated code by importing types from the file.
+
+Example:
+```
+import { Resolvers } from '../../../@types/generated/graphql';
+
+...
+
+export const resolvers: Resolvers = {
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
