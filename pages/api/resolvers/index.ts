@@ -1,4 +1,4 @@
-import { Resolvers } from '../../../@types/generated/graphql';
+import { Resolvers } from '../../../types/generated/graphql';
 import * as query from './query';
 import { prisma } from '../../../prisma/client';
 

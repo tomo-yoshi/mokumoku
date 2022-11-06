@@ -342,11 +342,11 @@ This project has adopted [GraphQL Code Generator](https://github.com/dotansimha/
 ```
 yarn codegen
 ```
-- The code is generated to `@types/generated/graphql.ts`. Use generated code by importing types from the file.
+- The code is generated to `types/generated/graphql.ts`. Use generated code by importing types from the file.
 
 Example:
 ```
-import { Resolvers } from '../../../@types/generated/graphql';
+import { Resolvers } from '@customTypes/generated/graphql';
 
 ...
 

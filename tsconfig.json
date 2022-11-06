@@ -16,6 +16,15 @@
     "incremental": true,
     "sourceMap": true,
     "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@prisma/*": [
+        "prisma/*"
+      ],
+      "@customTypes/*": [
+        "types/*"
+      ]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.js"],
   "exclude": ["node_modules"]
