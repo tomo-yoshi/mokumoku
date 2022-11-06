@@ -1,4 +1,4 @@
-import { prisma } from '@prisma/client';
+import { prisma } from '@customPrisma/client';
 import { QueryResolvers } from '@customTypes/generated/graphql';
 
 export const getEvents: QueryResolvers['getEvemts'] = async () => {
